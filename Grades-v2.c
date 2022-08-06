@@ -13,6 +13,16 @@ int main()
     char gradeD_plus[10] = "D+";
     char gradeD[10] = "D";
     char gradeF[10] = "F";
+    if(score < 0)
+    {
+        printf("Error : Value must be greater than or equal to 0.");
+        return 0;
+    }
+    else if(score > 100)
+    {
+        printf("Error : Value must be less than or equal to 100.");
+        return 0;
+    }
     switch (score / 5)
     {
         case 20:     
@@ -45,9 +55,24 @@ int main()
             strcpy(grade, gradeD);
             printf("%s",grade);
             break;
-        default:
+        case 11:
+        case 10:
+        case 9:
+        case 8:
+        case 7:
+        case 6:
+        case 5:
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+        case 0:
             strcpy(grade, gradeF);
             printf("%s",grade);
+            break;
+        default:
+            break;
+            
     }
     return 0;
 }
