@@ -15,14 +15,8 @@ int main()
     char gradeF[10] = "F";
     switch (score / 5)
     {
-        case 20: 
-            strcpy(grade, gradeA);   
-            printf("%s",grade);
-            break;
-         case 19: 
-            strcpy(grade, gradeA);   
-            printf("%s",grade);
-            break;
+        case 20:     
+        case 19: 
         case 18: 
             strcpy(grade, gradeA);   
             printf("%s",grade);
